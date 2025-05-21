@@ -1,0 +1,183 @@
+ /* Query: */
+ /*ContextLines: 1 */
+
+/* Asosiy o'zgaruvchilar */
+:root {
+    --primary-color: #e50914; /* Netflix qizil rangi */
+    --dark-bg: #141414;
+    --dark-bg-alt: #1f1f1f;
+    --text-color: #ffffff;
+    --text-muted: #b3b3b3;
+    --font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background-color: var(--dark-bg-alt);
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #333;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 28px;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.nav {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-size: 16px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color);
+}
+
+.btn-login {
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--text-color);
+    padding: 10px 22px;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #b0060f;
+}
+
+/* Hero section */
+.hero {
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') center center/cover no-repeat;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    text-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #b0060f;
+}
+
+/* Movies section */
+.movies {
+    padding: 60px 0;
+}
+
+.movies h3 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.movie-card {
+    background-color: var(--dark-bg-alt);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+.movie-card img {
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #333;
+}
+
+.movie-card h4 {
+    padding: 15px;
+    font-size: 18px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark-bg-alt);
+    padding: 20px 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 14px;
+    border-top: 1px solid #333;
+}
